@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe6ef">
+  <title>Our Love Adventure 💗</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='game.css') }}">
+</head>
+<body>
+  <div class="ambient" id="ambient"></div>
+  <header class="topbar">
+    <a class="brand" href="#home">🌷 Our Love Adventure</a>
+    <span class="for-you">a little game for Naura</span>
+  </header>
+
+  <main class="shell">
+    <section class="screen active" id="home">
+      <div class="eyebrow">A SPECIAL LITTLE ADVENTURE</div>
+      <div class="hero-art">💗</div>
+      <h1>Hi, Naura Decul!</h1>
+      <p class="lead">Ada kejutan kecil yang menunggumu. Selesaikan empat misi sederhana untuk membuka pesan spesial di akhir perjalanan.</p>
+      <div class="pill-row"><span>🌸 4 mini games</span><span>💌 1 secret message</span><span>✨ Just for you</span></div>
+      <button class="primary" id="startBtn">Mulai Petualangan <span>→</span></button>
+      <p class="tiny">Siapkan waktu sebentar dan nikmati permainannya.</p>
+    </section>
+
+    <section class="screen" id="level1">
+      <div class="level-head"><span class="level-tag">LEVEL 1 / 4</span><span class="progress-label">Misi mencari hati</span></div>
+      <h2>Find the Hearts 💗</h2>
+      <p class="lead">Ketuk kelima kartu untuk menemukan hati yang tersembunyi.</p>
+      <div class="counter"><span id="heartCount">0</span><small> / 5 ditemukan</small></div>
+      <div class="heart-grid" id="heartGrid">
+        <button class="heart-tile" aria-label="Kartu 1">?</button>
+        <button class="heart-tile" aria-label="Kartu 2">?</button>
+        <button class="heart-tile" aria-label="Kartu 3">?</button>
+        <button class="heart-tile" aria-label="Kartu 4">?</button>
+        <button class="heart-tile" aria-label="Kartu 5">?</button>
+      </div>
+      <p class="feedback" id="heartFeedback" aria-live="polite">Semua kartu menyimpan kejutan kecil.</p>
+    </section>
+
+    <section class="screen" id="level2">
+      <div class="level-head"><span class="level-tag">LEVEL 2 / 4</span><span class="progress-label">Kuis ringan</span></div>
+      <h2>Little Love Quiz 💌</h2>
+      <p class="lead">Pilih jawaban yang menurutmu paling tepat. Tidak ada nilai, yang penting seru!</p>
+      <div class="quiz-card">
+        <div class="quiz-count" id="quizCount">PERTANYAAN 1 DARI 3</div>
+        <h3 id="question"></h3>
+        <div id="answers" class="answers"></div>
+        <p class="feedback" id="quizFeedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="screen" id="level3">
+      <div class="level-head"><span class="level-tag">LEVEL 3 / 4</span><span class="progress-label">Puzzle angka</span></div>
+      <h2>Sweet Little Puzzle 🧩</h2>
+      <p class="lead">Geser kotak di sebelah ruang kosong sampai angka tersusun dari 1 sampai 8.</p>
+      <div class="puzzle" id="puzzle" aria-label="Puzzle angka"></div>
+      <p class="feedback" id="puzzleFeedback" aria-live="polite">Tip: kotak yang berdampingan dengan ruang kosong bisa digeser.</p>
+      <button class="secondary" id="shuffleBtn">Acak ulang</button>
+    </section>
+
+    <section class="screen" id="level4">
+      <div class="level-head"><span class="level-tag">LEVEL 4 / 4</span><span class="progress-label">Kumpulkan bunga</span></div>
+      <h2>Collect the Flowers 🌷</h2>
+      <p class="lead">Ketuk 10 bunga untuk mengisi buket kejutanmu.</p>
+      <div class="counter"><span id="flowerCount">0</span><small> / 10 bunga</small></div>
+      <div class="flower-grid" id="flowerGrid"></div>
+      <p class="feedback" id="flowerFeedback" aria-live="polite">Buketmu masih kosong. Yuk, kumpulkan bunganya!</p>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="eyebrow">YOU DID IT!</div>
+      <div class="hero-art final-art">🎁</div>
+      <h1>Petualangan selesai!</h1>
+      <p class="lead">Semua misi berhasil kamu lewati, Naura. Ada satu hadiah terakhir yang sudah menunggumu.</p>
+      <button class="primary" id="revealBtn">Buka Pesan Rahasia 💌</button>
+      <article class="letter" id="secretLetter">
+        <div class="letter-top">✿ A LITTLE LETTER ✿</div>
+        <h2>Dear Naura Decul,</h2>
+        <p>Terima kasih sudah menjadi bagian dari cerita yang indah. Semoga hari-harimu selalu dipenuhi hal-hal baik, alasan untuk tersenyum, dan orang-orang yang menghargaimu.</p>
+        <p>Aku mungkin tidak selalu punya kata-kata yang sempurna, tetapi aku ingin kamu tahu bahwa kehadiranmu berarti. Semoga kita bisa terus saling mendukung, saling memahami, dan membuat banyak kenangan baik.</p>
+        <p class="signoff">Dengan hangat, <br><strong>seseorang yang peduli padamu 💗</strong></p>
+        <div class="letter-flower">🌸 🌷 🌸</div>
+      </article>
+      <button class="secondary" id="restartBtn">Main lagi ↻</button>
+    </section>
+  </main>
+
+  <footer>Made with care for Naura Decul · Our Love Adventure © 2026</footer>
+  <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
